@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+:root {
+  --moon-white-color:white;
+  --moon-black-color: black;
+  --moon-sal-color: #929699;
+}
+.darkmode {
+  --moon-white-color:#15202B;
+  --moon-black-color: white;
+  --moon-sal-color: white;
+}
+
+#dark-mode-toggle {
+  display: none;
+}
+.dark-mode-toggle {
+  display: inline-block;
+  cursor: pointer;
+  /* margin-top: 14%; */
+  padding: .5rem;
+}
+.dark-mode-toggle:hover, .dark-mode-toggle:focus {
+background-color: var(--hover-color);
+border-radius: 16px;
+}
+.dark-mode-toggle{
+background-color: var(--hover-color);
+border-radius: 16px;
+}
+.dark-mode-toggle::after {
+content: '🌞 ';
+  transform: translateX(0px) rotate(360deg);
+}
+#dark-mode-toggle:checked+.dark-mode-toggle::after {
+  content: '🌚';
+width: 30px;
+height: 30px;
+display: grid;
+place-content: center;
+line-height: 0;
+transition: background-color 1s,
+transform 1s ease-in;
+}
+/* =================nav=============== */
+nav{
+    background-color:var(--moon-white-color);
+    box-shadow: 0px -15px 25px 0px slategrey;
+    transition: 0.6s;
+    height: 85px;
+    margin: 0;
+    padding: 0;
+}
+#icon-m{
+  cursor: pointer;
+  width: 30px;
+}
+nav.sticky{
+    padding: 5px 5px;
+    box-shadow: 0px -15px 25px 0px slategrey;
+    background-color: var(--moon-white-color);
+    height: 79px;
+}
+.navbar h5{
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--moon-black-color);
+  letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar .collapse .navbar-nav .nav-item a{
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-right:26px;
+  margin-top: -7px;
+  color: var(--moon-black-color);
+}
+.navbar .collapse .navbar-nav .nav-item a:hover{
+  color: var(--moon-black-color);
+  transition: 0.7s;
+}
+.navbar .navbar-brand .fal{
+    color: var(--moon-white-color);
+    font-size: 59px;
+}
+
+@media screen and (max-width:980px) {
+  .navbar-collapse{
+    background-color: var(--moon-white-color);
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+    
+  }
+  .navbar-collapse{
+    margin-top: 6px;
+  }
+  nav.sticky{
+    padding: 5px 5px;
+    background-color: var(--moon-white-color);
+    height: 80px;
+    margin-top: -18px;
+}
+nav{
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  margin-top: -18px;
+}
+.navbar h5{
+  margin-top: 22px;
+}
+}
+/*=========home=======*/
+.Enjoy{
+ background-color: var(--moon-white-color);
+}
+.Enjoy .row h1{
+    margin-top: 24%;
+    font-size: 55px;
+    font-weight: 600;
+    letter-spacing: -4px;
+    color: var(--moon-black-color);
+    font-family: 'Montserrat', sans-serif;
+}
+.Enjoy .row .btn{
+  background-color: #703ffa;
+  border-radius: 30px;
+  color: white;
+}
+.Enjoy .row .btn-f{
+ background-color: white;
+ box-shadow: 0px 1px 5px -2px slategrey;
+border-radius: 15px;
+color: black;
+border: none;
+} 
+.Enjoy .row .go{
+  color: var(--moon-black-color);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.Enjoy .row p{
+  letter-spacing: 1px;
+  font-size: 19px;
+  padding-right: 9%;
+  font-weight: 500;
+  color: var(--moon-sal-color);
+}
+.Enjoy .row .images img{
+   margin-top: 25%;
+   border-radius: 50px 0px 50px;
+}
+/*  */
+.Enjoy .row .images img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+.Enjoy .row .images img.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/*  */
+.Enjoy .row .images{
+  text-align: center;
+}
+@media screen and (max-width:940px) {
+  .Enjoy .row .images img{
+    width: 100%;
+   margin-top: 35%;
+ }
+}
+@media screen and (max-width:758px){
+  .Enjoy .row .images img{
+   margin-top: 6%;
+ }
+}
+.Enjoy .hello .icon ul li{
+   list-style: none;
+   /* padding-top: 10px; */
+}
+.Enjoy .hello .icon .fa-brands{
+  color: var(--moon-sal-color);
+  font-size: 25px;
+  margin-top: 3rem;
+}
+.Enjoy .hello .icon .fa-brands:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Enjoy .hello .icon .fa-solid:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: 1s;
+}
+.Enjoy .hello .icon .fa-solid{
+  color: var(--moon-sal-color);
+  font-size: 25px;
+  margin-top: 5rem;
+}
+.Enjoy .hello .icon ul{
+  margin-top: -2rem;
+  padding: 0px;
+}
+@media screen and (max-width:500px){
+  .Enjoy .row h1{
+    margin-top: 20%;
+    font-size: 43px;
+}
+.Enjoy .row p{
+  letter-spacing: 1px;
+  color:var(--moon-sal-color);
+}
+}
+/* ==============about============= */
+.about{
+  background-color: var(--moon-white-color);
+  /* height: 680px; */
+}
+.about .about-skil{
+  background-color: var(--moon-white-color);
+  box-shadow: 0px 3px 39px -16px slategray;
+  border-radius: 20px;
+}
+.about .had h1{
+  color: var(--moon-black-color);
+  font-weight: 700;
+  font-size: 31px;
+  letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif;
+}
+.about .had p{
+  font-size: 23px;
+  font-weight: 600;
+  color: #929699;
+  padding-left: 21px;
+  letter-spacing: 1px;
+}
+.about h1{
+  color: var(--moon-black-color);
+  font-weight: 500;
+  font-size: 47px;
+  padding-top: 6%;
+  font-family: 'Montserrat', sans-serif;
+}
+.about p{
+  font-size: 18px;
+}
+.about h2{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+.about .software p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #929699;
+  padding-left: 21px;
+  letter-spacing: 1px;
+}
+.about .software h1{
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+.about .software .btn{
+  color: var(--moon-black-color);
+  font-size: 14px;
+  margin-top: 14px;
+  margin-left: 7px;
+  border-radius: 30px;
+  /* background-color: var(--moon-black-color); */
+  border: 1px solid var(--moon-black-color);
+  /* border: 1px solid white; */
+}
+.about .software .btn:hover{
+  transition: 0.3s;
+  box-shadow: 0px 1px 5px -2px slategrey;
+}
+
+/* =============IT projects============= */
+
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.15);
+  opacity: 1;
+  background: white; /* fallback for old browsers */
+  color: black;
+}
+.sli{
+  background-color: var(--moon-white-color);
+}
+.sli h1{
+  color: var(--moon-black-color);
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif;
+}
+.sli .sli-p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #929699;
+}
+.slider-card {
+  background-color: #f8f8fa;
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+  transform: scale(0.9);
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.slider-card p{
+  font-size: 15px;
+  font-weight: 500;
+  color: #929699;
+}
+.slider-card .btn{
+  font-size: 12px;
+  color: white;
+  border-radius: 30px;
+  border: 1px solid #703ffa;
+  background-color: #703ffa;
+}
+.slider-card .btn-p{
+  font-size: 14px;
+  color: #703ffa;
+  border: none;
+  border-radius: 30px !important;
+  box-shadow: 0px 1px 5px -2px slategrey;
+  background-color: #f8f8fa;
+}
+.slider-card li{
+  font-size: 13px;
+  font-weight: 500;
+  color: #929699;
+  letter-spacing: 0px;
+}
+.slider-card h5{
+  color: black;
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: -1px;
+  font-family: 'Montserrat', sans-serif;
+}
+.slider-card img {
+  border-radius: 5px 5px 0px 0px;
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  opacity: 1;
+  /* z-index: 9; */
+  padding-left: 17px !important;
+    padding-top: 4px !important;
+    padding-right: 20px !important;
+    padding-bottom: 6px !important;
+    border-radius: 30px;
+  font-size: 30px !important;
+  background-color: white !important;
+  box-shadow: 0px 1px 5px -2px slategrey;
+
+}
+.owl-nav .owl-next {
+  right: 0;
+  opacity: 1;
+  z-index: 1;
+  background-color: white !important;
+  position: absolute;
+  padding-left: 17px !important;
+  padding-top: 4px !important;
+  padding-right: 20px !important;
+  padding-bottom: 6px !important;
+  border-radius: 30px;
+  top: calc(50% - 25px);
+  font-size: 30px !important;
+  box-shadow: 0px 1px 5px -2px slategrey;
+}
+.owl-dots {
+  text-align: center;
+}
+
+@media screen and (max-width:980px){
+  .slider-card {
+    padding: 0px 0px;
+    margin: 93px 51px 98px 51px;
+    /* box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%); */
+  }
+}
+@media screen and (max-width:389px){
+  .sli .sli-p{
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+/* ======================================about page======================================================= */
+.about-me{
+  background-color: var(--moon-white-color);
+}
+.about-me .abo{
+  padding-top: 16%;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--moon-black-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.about-me .about-2 h1{
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: var(--moon-black-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.about-me .about-2 p{
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--moon-sal-color);
+  letter-spacing: 0px;
+}
+.about-me .par p{
+ font-size: 14px;
+ font-weight: 600;
+ color: #929699;
+ letter-spacing: 1px;
+}
+@media screen and (max-width:500px){
+  .about-me .abo{
+    padding-top: 33%;
+  }
+}
+/* ======================================education-page============================== */
+.education{
+  background-color: var(--moon-white-color);
+}
+.education h1{
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--moon-black-color);
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+.education .card h1{
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--moon-black-color);
+  font-size: 27px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.education .card ul li{
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #929699;
+  font-size: 19px;
+}
+.education .card{
+  background-color: var(--moon-white-color);
+  box-shadow: 0px 3px 39px -16px slategrey;
+  border: none;
+  border-radius: 10px;
+}
+/* ============================================expereience-page======================================= */
+.expereience{
+  background-color: var(--moon-white-color);
+}
+.expereience  .heading h1{
+  margin-top: 130px;
+  font-weight: 700;
+  color: var(--moon-black-color);
+  font-family: 'Montserrat', sans-serif;
+
+ }
+ .expereience .check h1{
+  font-weight: 700;
+  color: var(--moon-black-color);
+  font-family: 'Montserrat', sans-serif;
+ }
+ .expereience .icon1 .fa-regular{
+  color: #929699;
+  font-size: 20px;
+  margin-left: 20px;
+ }
+ .expereience .icon1{
+  background: #f8f8fa;
+  width: 61.5%;
+  border-radius: 30px;
+ }
+ .expereience .icon1 p{
+  color: #929699;
+  font-weight: 600;
+ }
+ .expereience .fa-solid{
+  color: blue;
+  font-size: 23px;
+ }
+ .expereience .content{
+  font-weight: 500;
+  color: var(--moon-sal-color);
+ }
+ .expereience .frame{
+  position: relative;
+ }
+ .expereience .heading-h{
+  font-size: 43px;
+  font-weight: 600;
+  color: var(--moon-black-color);
+  letter-spacing: -1px;
+ }
+
+/* ========================================download resume page====================== */
+.resume{
+  background-color: var(--moon-white-color);
+}
+.resume .container .row h1{
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--moon-black-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.resume .container .row h1 span{
+  font-family: 'Montserrat', sans-serif;
+  color: #f47bf4db;
+}
+.resume .container .row p{
+  color: #929699;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.resume .container .row button{
+  border: none;
+  background: #703ffa;
+  border-radius: 30px;
+  box-shadow: 0px 3px 39px -16px slategrey;
+}
+.resume .container .row button a{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* ================================================contact-me page===================================== */
+
+/* ==========================footer page========================== */
+.footer{
+  background: var(--moon-white-color);
+  box-shadow: 0px 3px 39px -16px slategrey;
+}
+.footer .foot .icon-f .fa-brands{
+  font-size: 28px;
+  color: var(--moon-black-color);
+}
+.footer .foot p{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--moon-black-color);
+  letter-spacing: -1px;
+}
+
